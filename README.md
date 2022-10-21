@@ -2,8 +2,13 @@
 
 ## Example react + typescript + oidc + keycloak + asp.net
 
-## build:
+## Build:
 > docker compose build
 
-## run:
+## Run:
 > docker compose up
+### The user in this example:
+
+**login:** react-tester
+
+**password:** ^J2WnUY#T3XSi4@AH4NEySqUAhfhid%o
