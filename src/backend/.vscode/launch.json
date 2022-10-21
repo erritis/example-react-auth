@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Docker .NET Core Attach",
+            "type": "docker",
+            "preLaunchTask": "docker-compose up backend",
+            "request": "attach",
+            "platform": "netCore",
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}"
+            },
+            "containerName": "react-auth-backend"
+        }
+    ]
+}
