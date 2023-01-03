@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useAuth } from 'react-oidc-context';
 
 interface WeatherForecast {
   date: string;
@@ -10,24 +9,18 @@ interface WeatherForecast {
 
 const Secured = () => {
 
-  const auth = useAuth();
   const [forecasts, setForecasts] = useState<WeatherForecast[]>([]);
 
   React.useEffect(() => {
       (async () => {
       try {
-          const token = auth.user?.access_token;
-          const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/weatherforecast`, {
-          headers: {
-              Authorization: `Bearer ${token}`,
-          },
-          });
+          const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/weatherforecast`);
           setForecasts(await response.json());
       } catch (e) {
           console.error(e);
       }
       })();
-  }, [auth]);
+  }, []);
 
 
 

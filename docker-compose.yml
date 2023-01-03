@@ -69,9 +69,7 @@ services:
       NODE_ENV: development
       PORT: 52434
       REACT_APP_KEYCLOAK_URL: http://172.18.0.3:52433/realms/react-example
-      REACT_APP_KEYCLOAK_REALM: react-example
       REACT_APP_KEYCLOAK_CLIENT_ID: react
-      REACT_APP_KEYCLOAK_REDIRECT_URL: http://localhost:52434/
       REACT_APP_BACKEND_URL: http://localhost:52435
     working_dir: /app
     command: sh -c "yarn install && yarn start"
